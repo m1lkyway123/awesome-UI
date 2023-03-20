@@ -8,6 +8,7 @@ body {
     font-weight: 400;
     background: #E5E5E5;
     color: #4F4F4F;
+    line-height: 21px;
 }
 a {
     text-decoration: none;
@@ -254,5 +255,53 @@ a {
 }
 
 .amet {
-    padding: 100px;
+    padding-top: 100px;
+}
+.amet__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.amet__img {
+    position: relative;
+}
+.amet__img::after {
+    content: '';
+    width: 546px;
+    height: 561px;
+    position: absolute;
+    background-image: url(../images/amet-img.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: -60px;
+    bottom: -60px;
+    z-index: -1;
+}
+.amet__texts {
+    max-width: 415px;
+    margin: auto 0;
+}
+.amet__text {
+    margin: 24px 0 40px;
+}
+
+.quis {
+    padding-top: 137px;
+}
+.quis__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.quis__slider-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quis__slider-btn button {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.btn__slider-left {
+    margin-bottom: 10px;
 }
