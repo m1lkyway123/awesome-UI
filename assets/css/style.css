@@ -256,6 +256,7 @@ a {
 
 .amet {
     padding-top: 100px;
+    background-color: #fff;
 }
 .amet__inner {
     display: flex;
@@ -263,6 +264,7 @@ a {
 }
 .amet__img {
     position: relative;
+    z-index: 1;
 }
 .amet__img::after {
     content: '';
@@ -285,7 +287,8 @@ a {
 }
 
 .quis {
-    padding-top: 137px;
+    padding: 137px 0 172px;
+    background-color: #fff;
 }
 .quis__inner {
     display: flex;
@@ -305,3 +308,40 @@ a {
 .btn__slider-left {
     margin-bottom: 10px;
 }
+.quis__slider-item {
+    background: linear-gradient(358.27deg, rgba(100, 123, 100, 0.77) -118.86%, rgba(100, 123, 100, 0) 25.62%, rgba(100, 123, 100, 0) 98.53%), #FFFFFF;
+    border-radius: 8px;
+    max-width: 360px;
+    padding: 32px 32px 32px 29px;
+    margin-right: 40px;
+}
+.slider__item-top {
+    display: flex;
+}
+.slider__item-texts {
+    margin-top: 17px;
+}
+.slider__item-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    margin-bottom: 5px;
+}
+.slider__item-name {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+}
+.slider__item-text {
+    max-width: 260px;
+    margin-top: 24px;
+    font-style: italic;
+}
+
+.slick-track {
+    display: flex;
+}
+.slick-list {
+    overflow: hidden;
+}
+
