@@ -42,9 +42,14 @@ a {
     align-items: center;
     height: 140px;
 }
+.header__menu-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+}
 .header__menu-list {
     display: flex;
-    margin-left: auto;
     font-weight: 500;
     line-height: 20px;
     color: #333333;
@@ -61,6 +66,47 @@ a {
     text-transform: uppercase;
     padding: 10px 15px;
     cursor: pointer;
+}
+.header__burger-btn {
+    display: none;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-color: #F3B562;
+    cursor: pointer;
+    z-index: 2;
+}
+.header__burger-btn span {
+    position: absolute;
+    height: 2px;
+    background-color: #051033;
+    border-radius: 10px;
+    transition: transform .5s, opacity .5s, background-color .5s;
+}
+.header__burger-btn span:nth-child(1) {
+    transform: translateY(-5px);
+    width: 9px;
+    left: 3.5px;
+}
+.header__burger-btn span:nth-child(2) {
+    width: 21px;
+    left: 3.5px;
+}
+.header__burger-btn span:nth-child(3) {
+    transform: translateY(5px);
+    width: 9px;
+    right: 3.5px;
+}
+.header.open .header__burger-btn span:nth-child(1) {
+    transform: translate(1px, 3px) rotate(45deg);
+}
+.header.open .header__burger-btn span:nth-child(2) {
+    transform: rotate(-45deg);
+    width: 18px;
+}
+.header.open .header__burger-btn span:nth-child(3) {
+    transform: translate(-4px, -3px) rotate(45deg);
 }
 
 .started {
@@ -438,5 +484,49 @@ a {
     right: 22px;
     background-image: url(../images/arrow.svg);
     background-repeat: no-repeat;
+}
+
+
+
+@media (max-width: 768px) {
+    .header__burger-btn {
+        display: block;
+    }
+    .header__menu-inner {
+        display: block;
+        position: absolute;
+        text-align: center;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #F3B562;
+        padding: 25vh 20px 20px 20px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .5s;
+    }
+    .header.open .header__menu-inner {
+        opacity: 1;
+        pointer-events: all;
+    }
+    .header__menu-list {
+        display: block;
+    }
+    .header__menu-item {
+        margin-right: 0;
+    }
+    .menu__item-link {
+        color: #fff;
+        font-size: 18px;
+        display: block;
+        padding: 10px 0;
+        margin-bottom: 5px;
+    }
+    .header__menu-reg {
+        width: 100%;
+        font-size: 15px;
+        margin-top: 20px;
+    }
 }
 
