@@ -42,6 +42,9 @@ a {
     align-items: center;
     height: 140px;
 }
+.header__menu-img--mobile {
+    display: none;
+}
 .header__menu-inner {
     display: flex;
     align-items: center;
@@ -73,16 +76,16 @@ a {
     width: 28px;
     height: 28px;
     border: none;
-    background-color: #F3B562;
+    background-color: transparent;
     cursor: pointer;
     z-index: 2;
 }
 .header__burger-btn span {
     position: absolute;
-    height: 2px;
+    height: 2.40px;
     background-color: #051033;
-    border-radius: 10px;
-    transition: transform .5s, opacity .5s, background-color .5s;
+    border-radius: 15px;
+    transition: transform .5s, background-color .5s;
 }
 .header__burger-btn span:nth-child(1) {
     transform: translateY(-5px);
@@ -98,15 +101,18 @@ a {
     width: 9px;
     right: 3.5px;
 }
+.header.open .header__burger-btn span {
+    background-color: #fff;
+}
 .header.open .header__burger-btn span:nth-child(1) {
-    transform: translate(1px, 3px) rotate(45deg);
+    transform: translate(1px, -4px) rotate(45deg);
 }
 .header.open .header__burger-btn span:nth-child(2) {
     transform: rotate(-45deg);
     width: 18px;
 }
 .header.open .header__burger-btn span:nth-child(3) {
-    transform: translate(-4px, -3px) rotate(45deg);
+    transform: translate(-4px, 3px) rotate(45deg);
 }
 
 .started {
@@ -489,6 +495,15 @@ a {
 
 
 @media (max-width: 768px) {
+    .header__menu {
+        justify-content: space-between;
+    }
+    .header__menu-img {
+        display: none;
+    }
+    .header__menu-img--mobile {
+        display: block;
+    }
     .header__burger-btn {
         display: block;
     }
@@ -501,7 +516,7 @@ a {
         width: 100%;
         height: 100vh;
         background-color: #F3B562;
-        padding: 25vh 20px 20px 20px;
+        padding: 21vh 20px 20px 20px;
         opacity: 0;
         pointer-events: none;
         transition: opacity .5s;
@@ -518,7 +533,7 @@ a {
     }
     .menu__item-link {
         color: #fff;
-        font-size: 18px;
+        font-size: 16px;
         display: block;
         padding: 10px 0;
         margin-bottom: 5px;
