@@ -4,7 +4,23 @@ $(document).ready(function(){
         slidesToShow: 3,
         slidesToScroll: 1,
         prevArrow: $('.btn__slider-left'),
-        nextArrow: $('.btn__slider-right')
+        nextArrow: $('.btn__slider-right'),
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                prevArrow: false,
+                nextArrow: false,
+              }
+            },
+            {
+                breakpoint: 430,
+                settings: {
+                  slidesToShow: 1
+                }
+            }
+        ]
     });
 });
 

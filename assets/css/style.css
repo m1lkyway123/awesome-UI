@@ -245,6 +245,7 @@ a {
 
 .consectet {
     padding-top: 140px;
+    padding-bottom: 15px;
     overflow-x: hidden;
 }
 .consectet__texts {
@@ -319,7 +320,7 @@ a {
 }
 
 .amet {
-    padding-top: 100px;
+    padding-top: 85px;
     background-color: #fff;
 }
 .amet__inner {
@@ -648,6 +649,33 @@ a {
     .amet__text {
         margin: 24px 0 25px;
     }
+
+    .quis__slider-item {
+        margin-right: 26px;
+        padding: 20px 16px 21px 25px;
+        width: 100% !important;
+    }
+    .quis__slider-btn {
+        display: none;
+    }
+    .slider__item-title {
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 3px;
+    }
+    .slider__item-img {
+        max-width: 103px;
+    }
+    .slider__item-name {
+        font-size: 10px;
+        line-height: 13px;
+    }
+    .slider__item-text {
+        max-width: 191px;
+        margin-top: 15px;
+        font-size: 12px;
+        line-height: 16px;
+    }
 }
 
 
@@ -862,6 +890,27 @@ a {
     .consectet__item-text {
         line-height: 11px;
         font-size: 8px;
+    }
+
+    .amet__img::after {
+        max-width: 278px;
+        max-height: 285px;
+    }
+    .amet__texts {
+        max-width: 258px;
+        padding-left: 30px;
+    }
+    .amet__text {
+        margin: 16px 0 25px;
+        font-size: 10px;
+        line-height: 13px;
+    }
+
+    .quis {
+        padding: 115px 0 65px;
+    }
+    .quis__slider-item {
+        max-width: 300px;
     }
 }
 
