@@ -10,6 +10,9 @@ body {
     color: #4F4F4F;
     line-height: 21px;
 }
+body.open {
+    overflow: hidden;
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -685,6 +688,14 @@ a {
         font-size: 12px;
         line-height: 16px;
     }
+
+    .footer__awesome {
+        max-width: 249px;
+    }
+    .footer__send {
+        margin-top: 40px;
+        width: 100%;
+    }
 }
 
 
@@ -700,6 +711,10 @@ a {
     .mot__item-text {
         font-size: 12px;
         max-width: 100%;
+    }
+
+    .footer {
+        padding: 40px 0;
     }
 }
 
@@ -923,3 +938,22 @@ a {
     }
 }
 
+@media (max-width: 345px) {
+    .footer__inner {
+        display: block;
+        text-align: center;
+    }
+    .footer__title {
+        margin-bottom: 12px;
+    }
+    .footer__item {
+        line-height: 20px;
+        font-size: 13px;
+    }
+    .footer__item + .footer__item {
+        margin-top: 7px;
+    }
+    .footer__suport {
+        margin-top: 15px;
+    }
+}
